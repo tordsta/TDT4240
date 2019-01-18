@@ -9,6 +9,7 @@ import com.tord.game.Oving1;
 import com.tord.game.states.GameStateManager;
 import com.tord.game.states.MenuState;
 import com.tord.game.states.Task1State;
+import com.tord.game.states.Task2State;
 
 public class Button {
     private GameStateManager gsm;
@@ -23,8 +24,6 @@ public class Button {
         this.state = stateNumber;
         texture = new TextureRegion(new Texture("playButton.png"), 90, 35, 75, 75 );
         position = new Vector3(x, y, 0);
-        //switch case til state
-        //stateToSwitchTo
 
     }
 
@@ -35,6 +34,9 @@ public class Button {
                 break;
             case 1:
                 gsm.set(new Task1State(gsm));
+                break;
+            case 2:
+                gsm.set(new Task2State(gsm));
                 break;
         }
     }
