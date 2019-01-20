@@ -7,13 +7,13 @@ import com.tord.game.Oving1;
 import com.tord.game.sprits.Button;
 import com.tord.game.sprits.HeliControlled;
 
-public class Task2State extends State {
+public class Task3State extends State {
     private HeliControlled heli;
     private Texture background;
     private Button menuButton;
     BitmapFont bitmapFont;
 
-    public Task2State(GameStateManager gsm) {
+    public Task3State(GameStateManager gsm) {
         super(gsm);
         heli = new HeliControlled(50,50, 256, 109);
         //cam.setToOrtho(false, Oving1.WIDTH*2, Oving1.HEIGHT*2);

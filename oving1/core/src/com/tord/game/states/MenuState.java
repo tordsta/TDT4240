@@ -33,6 +33,13 @@ public class MenuState extends State {
                 (Oving1.WIDTH / 2 - (75/2)),
                 ((Oving1.HEIGHT / 2) + 50)
         );
+        task3Button = new Button(
+                gsm,
+                3,
+                cam,
+                (Oving1.WIDTH / 2 - (75/2)),
+                ((Oving1.HEIGHT / 2) - 50)
+        );
 
     }
 
@@ -45,6 +52,7 @@ public class MenuState extends State {
         handleInput();
         task1Button.update(dt);
         task2Button.update(dt);
+        task3Button.update(dt);
     }
 
     @Override
@@ -53,6 +61,7 @@ public class MenuState extends State {
         sb.draw(background, 0,0, Oving1.WIDTH, Oving1.HEIGHT);
         sb.draw(task1Button.getTexture(), task1Button.getPosition().x, task1Button.getPosition().y);
         sb.draw(task2Button.getTexture(), task2Button.getPosition().x, task2Button.getPosition().y);
+        sb.draw(task3Button.getTexture(), task3Button.getPosition().x, task3Button.getPosition().y);
         sb.end();
     }
 
