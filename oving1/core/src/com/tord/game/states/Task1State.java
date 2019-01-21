@@ -44,7 +44,7 @@ public class Task1State extends State {
         //sb.setProjectionMatrix(cam.combined);
         sb.begin();
         sb.draw(background, 0,0, Oving1.WIDTH, Oving1.HEIGHT);
-        sb.draw(heli.getTexture(), heli.getPosition().x, heli.getPosition().y, heli.getWidth(), heli.getHeight());
+        sb.draw(heli.getSprite(), heli.getPosition().x, heli.getPosition().y, heli.getWidth(), heli.getHeight());
         sb.draw(menuButton.getTexture(), menuButton.getPosition().x, menuButton.getPosition().y);
         sb.end();
 

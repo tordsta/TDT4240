@@ -1,6 +1,7 @@
 package com.tord.game.sprits;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector3;
 import com.tord.game.Oving1;
 
@@ -11,11 +12,14 @@ public class Heli {
     private int width;
     private int height;
     private int speed = 5;
+    private Sprite sprite;
+    private boolean firstTimeFlip = true;
 
     public Heli(int x, int y, int width, int height){
         position = new Vector3(x,y,0);
         velocity = new Vector3(speed,speed,0);
         texture = new Texture("attackhelicopter.PNG");
+        sprite = new Sprite(texture);
         this.width = width;
         this.height = height;
     }
@@ -30,10 +34,16 @@ public class Heli {
         //changes velocity for hitting the right side
         if(position.x + width >= Oving1.WIDTH){
             velocity.x = velocity.x * (-1);
+            if(!firstTimeFlip){
+                sprite.flip(true, false);
+            } else {
+                this.firstTimeFlip = false;
+            }
         }
         //changes velocity for hitting the left side
         if(position.x <= 0){
             velocity.x = velocity.x * (-1);
+            sprite.flip(true, false);
         }
         //changes velocity for hitting the top side
         if(position.y + height >= Oving1.HEIGHT){
@@ -52,6 +62,8 @@ public class Heli {
     public Texture getTexture() {
         return texture;
     }
+
+    public Sprite getSprite() { return sprite; }
 
     public int getWidth() {
         return width;
