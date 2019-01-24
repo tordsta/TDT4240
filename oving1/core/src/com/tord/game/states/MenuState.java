@@ -40,6 +40,13 @@ public class MenuState extends State {
                 (Oving1.WIDTH / 2 - (75/2)),
                 ((Oving1.HEIGHT / 2) - 50)
         );
+        task4Button = new Button(
+                gsm,
+                4,
+                cam,
+                (Oving1.WIDTH / 2 - (75/2)),
+                ((Oving1.HEIGHT / 2) - 150)
+        );
 
     }
 
@@ -53,6 +60,7 @@ public class MenuState extends State {
         task1Button.update(dt);
         task2Button.update(dt);
         task3Button.update(dt);
+        task4Button.update(dt);
     }
 
     @Override
@@ -62,6 +70,7 @@ public class MenuState extends State {
         sb.draw(task1Button.getTexture(), task1Button.getPosition().x, task1Button.getPosition().y);
         sb.draw(task2Button.getTexture(), task2Button.getPosition().x, task2Button.getPosition().y);
         sb.draw(task3Button.getTexture(), task3Button.getPosition().x, task3Button.getPosition().y);
+        sb.draw(task4Button.getTexture(), task4Button.getPosition().x, task4Button.getPosition().y);
         sb.end();
     }
 

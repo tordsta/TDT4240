@@ -11,6 +11,7 @@ import com.tord.game.states.MenuState;
 import com.tord.game.states.Task1State;
 import com.tord.game.states.Task2State;
 import com.tord.game.states.Task3State;
+import com.tord.game.states.Task4State;
 
 public class Button {
     private GameStateManager gsm;
@@ -41,6 +42,9 @@ public class Button {
                 break;
             case 3:
                 gsm.set(new Task3State(gsm));
+                break;
+            case 4:
+                gsm.set(new Task4State(gsm));
                 break;
         }
     }
